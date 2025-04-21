@@ -981,5 +981,83 @@
 </div>
 
 
+<!-- Customers Management Page -->
+<div class="main-container" id="customers-page">
+    <div class="header-section">
+        <h2 class="section-title">
+            <i class="fas fa-users"></i> Manage Customers
+        </h2>
+        <button class="btn btn-go-back">
+            <i class="fas fa-arrow-left"></i> Go Back
+        </button>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="form-container">
+                <h5 class="form-title">Add New Customer <i class="fas fa-plus-circle text-success"></i></h5>
+
+                <div class="mb-3">
+                    <label for="customerId" class="form-label">Customer ID</label>
+                    <input type="text" class="form-control" id="customerId" placeholder="Enter customer ID (e.g. C001)">
+                </div>
+                <div class="mb-3">
+                    <label for="customerName" class="form-label">Customer Name</label>
+                    <input type="text" class="form-control" id="customerName" placeholder="Enter customer full name">
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Enter customer address">
+                </div>
+                <div class="mb-3">
+                    <label for="contactNumber" class="form-label">Contact Number</label>
+                    <input type="text" class="form-control" id="contactNumber" placeholder="Enter mobile number (07XXXXXXXX)">
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-add">
+                        <i class="fas fa-plus"></i> Add
+                    </button>
+                    <button class="btn btn-update">
+                        <i class="fas fa-sync-alt"></i> Update
+                    </button>
+                    <button class="btn btn-remove">
+                        <i class="fas fa-trash-alt"></i> Remove
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="search-container">
+                <input type="text" class="form-control search-bar" placeholder="Search by Customer Id">
+                <button class="btn btn-view-all">
+                    <i class="fas fa-list"></i> View All
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Customer Name</th>
+                        <th>Address</th>
+                        <th>Contact Number</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td>C001</td><td>Yashoda</td><td>Ratnapura</td><td>0713748066</td></tr>
+                    <tr><td>C002</td><td>Shavindi</td><td>Ehaliyagoda</td><td>0712378456</td></tr>
+                    <tr><td>C003</td><td>Dinithi</td><td>Galle</td><td>0765431890</td></tr>
+                    <tr><td>C004</td><td>Imasha</td><td>Ratnapura</td><td>0756743864</td></tr>
+                    <tr><td>C005</td><td>Nimasha</td><td>Elpitiya</td><td>0712376349</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
