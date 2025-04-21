@@ -34,9 +34,76 @@
             padding-top: 100px;
 
         }
+
+        /* Navigation Bar Styles */
+        .navbar{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            height: 80px;
+            z-index: 1000;
+            background-color: #3e2723 !important;
+        }
+
+        .navbar-collapse{
+            flex-grow: 0;
+        }
+
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+            font-size: 18px;
+        }
+
+        .nav-link,
+        .navbar-brand {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: #FCD34D !important; /* Yellow/Amber */
+        }
+
+        .btn-warning:hover {
+            background-color: transparent;
+            color: white;
+            font-weight: 600;
+        }
+
+        .btn-outline-light:hover {
+            background-color: white;
+            color: black;
+        }
     </style>
 </head>
 <body>
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand d-flex align-items-center" href="#" id="home-link">
+        <img src="assets/images/img.png" alt="Cafe Bloom Logo" width="60" height="60" class="me-2">
+        Cafe Bloom
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="#" id="home-nav-link">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" id="item-nav-link">Items</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" id="customers-nav-link">Customers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" id="orders-nav-link">Orders</a></li>
+        </ul>
+    </div>
+    <div>
+        <button class="btn btn-warning me-2" id="login-btn">Log In</button>
+        <button class="btn btn-outline-light" id="logout-btn">Log Out</button>
+    </div>
+</nav>
+
 
 </body>
 </html>
