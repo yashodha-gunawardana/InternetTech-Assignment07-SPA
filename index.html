@@ -78,6 +78,246 @@
             background-color: white;
             color: black;
         }
+
+        /* Login Page Styles */
+        .login-box{
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 30px;
+            max-width: 550px;
+            width: 100%;
+            height: 700px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 40px;
+            position: relative;
+            top: 50px;
+            overflow: hidden;
+        }
+
+        .login-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 167, 98, 0.1) 0%, transparent 70%);
+            animation: rotate 15s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .login-box h2 {
+            font-weight: 700;
+            font-size: 60px;
+            font-family: 'Playfair Display', serif;
+            color: #3e2723;
+            border-bottom: 2px solid #E9A72A;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0.5rem;
+            padding-bottom: 10px;
+        }
+
+        .login-box p {
+            font-size: 18px;
+            font-family: 'Parisienne', cursive;
+            color: #5a4a42;
+            margin-bottom: 40px;
+        }
+
+        .input-group {
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            max-width: 500px;
+            width: 100%;
+            margin: 30px auto;
+            position: relative;
+            top: 30px;
+        }
+
+        .input-group:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .input-group-text {
+            background-color: wheat;
+            color: #6f3200;
+            border: none;
+            width: 50px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            z-index: 1;
+            font-size: 1.1rem;
+        }
+
+        #login-form .form-control,
+        #signup-form .form-control,
+        #reset-form .form-control {
+            background-color: rgba(188, 170, 164, 0.65);
+            color: black;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 0.7rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            margin: 0 auto;
+        }
+
+        #login-form .form-control:focus,
+        #signup-form .form-control:focus,
+        #reset-form .form-control:focus {
+            background-color: rgba(188, 170, 164, 0.5);
+            box-shadow: none;
+            color: black;
+        }
+
+        #login-form .form-control::placeholder,
+        #signup-form .form-control::placeholder,
+        #reset-form .form-control::placeholder {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .btn-login {
+            background-color: #6f3200;
+            color: #fff;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            padding: 12px 0;
+            letter-spacing: 1px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(111, 50, 0, 0.4);
+            margin-top: 1rem;
+            width: 50%;
+            position: relative;
+            top: 20px;
+        }
+
+        .btn-login:hover, .btn-reset:hover {
+            background-color: #8a3e00;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(111, 50, 0, 0.6);
+            color: white;
+        }
+
+        .btn-cancel {
+            background-color: transparent;
+            color: black;
+            border: 2px solid #3e2723;
+            width: 100px;
+            height: 40px;
+            font-weight: 300;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            position: relative;
+            top: 40px;
+        }
+
+        .btn-cancel:hover {
+            background-color: #a65c00;
+            color: white;
+        }
+
+        .forgot-password {
+            color: #5a4a42;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            position: relative;
+            top: 10px;
+        }
+
+        .forgot-password:hover {
+            color: #6f3200;
+            text-decoration-color: #6f3200;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
+            color: #5a4a42;
+            position: relative;
+            top: 20px;
+        }
+
+        .divider::before, .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #bcaaa4;
+        }
+
+        .divider::before {
+            margin-right: 1.5rem;
+        }
+
+        .divider::after {
+            margin-left: 1.5rem;
+        }
+
+        .divider i {
+            font-size: 1.8rem;
+            color: #E9A72A;
+        }
+
+        .signup-text {
+            color: #5a4a42;
+            font-size: 0.5rem;
+            position: relative;
+            top: 20px;
+        }
+
+        .signup-link {
+            color: #6f3200;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            font-size: 1rem;
+        }
+
+        .signup-link:hover {
+            color: #3e2723;
+            text-decoration-color: #3e2723;
+        }
+
+        /* Coffee Icon */
+        .coffee-bean {
+            position: absolute;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .bean-1 {
+            top: 10%;
+            left: 15%;
+            font-size: 3rem;
+            transform: rotate(20deg);
+        }
+
+        .bean-2 {
+            bottom: 15%;
+            right: 10%;
+            font-size: 4rem;
+            transform: rotate(-15deg);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body>
@@ -103,6 +343,54 @@
         <button class="btn btn-outline-light" id="logout-btn">Log Out</button>
     </div>
 </nav>
+
+
+<!-- Login Form -->
+<div class="main-content" id="login-page">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="login-box text-center">
+            <!-- Coffee bean decorations -->
+            <i class="fa-solid fa-seedling coffee-bean bean-1"></i>
+            <i class="fa-solid fa-seedling coffee-bean bean-2"></i>
+
+            <h2>Welcome</h2>
+            <p class="mb-0">Sign in to your Cafe Bloom account</p>
+            <form class="form-container" id="login-form">
+
+                <!-- Username -->
+                <div class="input-group rounded-pill overflow-hidden" >
+                    <span class="input-group-text "><i class="fa-solid fa-user"></i></span>
+                    <input type="text" class="form-control" placeholder="username" required>
+                </div>
+
+                <!-- Password -->
+                <div class="input-group rounded-pill overflow-hidden">
+                    <span class="input-group-text "><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="password" required>
+                </div>
+
+                <!-- Forgot Password -->
+                <div class="mb-3 text-end">
+                    <a href="#" class="forgot-password" id="forgot-password-link">forgot password ?</a>
+                </div>
+
+                <!-- Log In Button -->
+                <button type="submit" class="btn btn-login">
+                    <i class="fa-solid fa-arrow-right-to-bracket me-2"></i>Log In
+                </button>
+
+                <!-- Divider with icon -->
+                <div class="divider">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </div>
+
+                <!-- Sign Up Link -->
+                <p class="signup-text">Don't you have an account ? <a href="#" class="signup-link" id="signup-link">Sign Up</a></p>
+
+            </form>
+        </div>
+    </div>
+</div>
 
 
 </body>
