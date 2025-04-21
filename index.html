@@ -462,6 +462,211 @@
             margin-bottom: 15px;
             color:  #6F4E37;
         }
+
+        /* Item Page Styles */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 800;
+            color: #a66200;
+            border-bottom: 3px solid #E9A72A;
+        }
+
+        .section-title i {
+            color: #a66200;
+            margin-right: 10px;
+        }
+
+        .btn-go-back {
+            background-color: transparent;
+            border: 2px solid #3e2723;
+            color: #3e2723;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-weight: 500;
+        }
+
+        .btn-go-back:hover {
+            background-color: #a66200;
+            color: black;
+        }
+
+        #items-page .form-container,
+        #customers-page .form-container,
+        #orders-page .form-container{
+            background-color: rgba(141, 110, 99, 0.65);
+            border-radius: 12px;
+            padding: 20px;
+            height: 100%;
+            position: relative;
+            top: 40px;
+        }
+
+        .form-title {
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border: 1px solid #3e2723;
+            background-color: rgba(245, 222, 179, 0.88);
+        }
+
+        .form-label {
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #3e2723;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-weight: 500;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-add {
+            background-color: #00e676;
+            color: black;
+        }
+
+        .btn-add:hover {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .btn-update {
+            background-color: #00b0ff;
+            color: black;
+        }
+
+        .btn-update:hover {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .btn-remove {
+            background-color: #ef5350;
+            color: black;
+        }
+
+        .btn-remove:hover {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 400px;
+            border-radius: 25px;
+            padding: 10px 20px;
+            border: 1px solid #eeeeee;
+            background-color: #8D6E63;
+            position: relative;
+            top: 40px;
+        }
+
+        .btn-view-all {
+            background-color: #077e43;
+            color: white;
+            height: 40px;
+            position: relative;
+            top: 40px;
+        }
+
+        .btn-view-all:hover {
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+        }
+
+        .table-container {
+            background-color: rgba(141, 110, 99, 0.65);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: relative;
+            top: 40px;
+        }
+
+        .table {
+            margin-bottom: 0;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .table thead th {
+            background-color: #8D6E63;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            padding: 15px;
+        }
+
+        .table th:first-child {
+            border-top-left-radius: 15px;
+        }
+
+        .table th:last-child {
+            border-top-right-radius: 15px;
+        }
+
+        .table td {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid #D7CCC8;
+            padding: 12px 15px;
+        }
+
+        .table tr:last-child td:first-child {
+            border-bottom-left-radius: 15px;
+        }
+
+        .table tr:last-child td:last-child {
+            border-bottom-right-radius: 15px;
+        }
+
+        .table-hover tbody tr:hover td {
+            background-color: rgba(207, 216, 220, 0.5);
+        }
+
+        .table-bordered {
+            border: 1px solid #BCAAA4;
+        }
+
+        .table tbody tr:nth-child(odd) td {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .table tbody tr:nth-child(even) td {
+            background-color: rgba(250, 250, 250, 0.8);
+        }
     </style>
 </head>
 <body>
@@ -670,6 +875,111 @@
         </div>
     </div>
 </div>
+
+
+<!-- Items Management Page -->
+<div class="main-container" id="items-page">
+    <div class="header-section">
+        <h2 class="section-title">
+            <i class="fas fa-store"></i> Manage Store Items
+        </h2>
+        <button class="btn btn-go-back">
+            <i class="fas fa-arrow-left"></i> Go Back
+        </button>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="form-container">
+                <h5 class="form-title">Add New Item <i class="fas fa-plus-circle text-success"></i></h5>
+
+                <div class="mb-3">
+                    <label for="itemId" class="form-label">Item ID</label>
+                    <input type="text" class="form-control" id="itemId" placeholder="Enter item ID (e.g. I001)">
+                </div>
+                <div class="mb-3">
+                    <label for="itemName" class="form-label">Item Name</label>
+                    <input type="text" class="form-control" id="itemName" placeholder="Enter item name">
+                </div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="quantity" placeholder="Enter quantity in stock">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price (LKR)</label>
+                    <input type="text" class="form-control" id="price" placeholder="Enter price in LKR">
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-add">
+                        <i class="fas fa-plus"></i> Add
+                    </button>
+                    <button class="btn btn-update">
+                        <i class="fas fa-sync-alt"></i> Update
+                    </button>
+                    <button class="btn btn-remove">
+                        <i class="fas fa-trash-alt"></i> Remove
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="search-container">
+                <input type="text" class="form-control search-bar" placeholder="Search by Item Id">
+                <button class="btn btn-view-all">
+                    <i class="fas fa-list"></i> View All
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>Item ID</th>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Price (LKR)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>I001</td>
+                        <td>Cappuccino</td>
+                        <td>10</td>
+                        <td>450.00</td>
+                    </tr>
+                    <tr>
+                        <td>I002</td>
+                        <td>Latte</td>
+                        <td>6</td>
+                        <td>480.00</td>
+                    </tr>
+                    <tr>
+                        <td>I003</td>
+                        <td>Donut</td>
+                        <td>5</td>
+                        <td>200.00</td>
+                    </tr>
+                    <tr>
+                        <td>I004</td>
+                        <td>Chicken Sandwich</td>
+                        <td>8</td>
+                        <td>600.00</td>
+                    </tr>
+                    <tr>
+                        <td>I005</td>
+                        <td>Mocha</td>
+                        <td>3</td>
+                        <td>500.00</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>
