@@ -344,6 +344,17 @@
             position: relative;
             top: 40px;
         }
+
+        #signup-form .input-group {
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            max-width: 500px;
+            width: 100%;
+            margin: 20px auto;
+            position: relative;
+            top: 30px;
+        }
     </style>
 </head>
 <body>
@@ -460,6 +471,63 @@
                     <i class="fa-solid fa-mug-hot"></i>
                 </div>
 
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Sign Up Form -->
+<div class="main-content" id="signup-page">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="login-box text-center">
+            <!-- Coffee bean decorations -->
+            <i class="fa-solid fa-seedling coffee-bean bean-1"></i>
+            <i class="fa-solid fa-seedling coffee-bean bean-2"></i>
+
+            <h2>Join Us</h2>
+            <p class="mb-0">Create your Cafe Bloom account</p>
+            <form class="form-container" id="signup-form">
+
+                <!-- Full Name -->
+                <div class="input-group rounded-pill overflow-hidden">
+                    <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" class="form-control" placeholder="full name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="input-group rounded-pill overflow-hidden">
+                    <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" class="form-control" placeholder="email" required>
+                </div>
+
+                <!-- Username -->
+                <div class="input-group rounded-pill overflow-hidden">
+                    <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" class="form-control" placeholder="username" required>
+                </div>
+
+                <!-- Password -->
+                <div class="input-group rounded-pill overflow-hidden">
+                    <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="password" required>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="input-group rounded-pill overflow-hidden">
+                    <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="confirm password" required>
+                </div>
+
+                <!-- Sign Up Button -->
+                <button type="submit" class="btn btn-login">
+                    <i class="fa-solid fa-user-plus me-2"></i>Sign Up
+                </button>
+
+                <!-- Divider with icon -->
+                <div class="divider">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </div>
             </form>
         </div>
     </div>
