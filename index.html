@@ -318,6 +318,32 @@
             50% { transform: scale(1.1); }
             100% { transform: scale(1); }
         }
+
+        #reset-form .divider {
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
+            color: #5a4a42;
+            position: relative;
+            top: 40px;
+        }
+
+        .btn-reset {
+            background-color: #6f3200;
+            color: #fff;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            padding: 12px 0;
+            letter-spacing: 1px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(111, 50, 0, 0.4);
+            margin-top: 1rem;
+            width: 50%;
+            position: relative;
+            top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -386,6 +412,53 @@
 
                 <!-- Sign Up Link -->
                 <p class="signup-text">Don't you have an account ? <a href="#" class="signup-link" id="signup-link">Sign Up</a></p>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Forgot Password Form -->
+<div class="main-content" id="resetPassword-page">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="login-box text-center">
+            <!-- Coffee bean decorations -->
+            <i class="fa-solid fa-seedling coffee-bean bean-1"></i>
+            <i class="fa-solid fa-seedling coffee-bean bean-2"></i>
+
+            <h2>Reset Password</h2>
+            <p class="mb-0">Changing Your Password</p>
+            <form class="form-container" id="reset-form">
+
+                <!-- Username -->
+                <div class="input-group rounded-pill overflow-hidden">
+                    <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" class="form-control" placeholder="username" required>
+                </div>
+
+                <!-- Password -->
+                <div class="input-group rounded-pill overflow-hidden">
+                    <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="new password" required>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="input-group rounded-pill overflow-hidden">
+                    <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="confirm password" required>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-button d-flex justify-content-center gap-5 mt-3">
+                    <button type="submit" class="btn btn-reset">Reset</button>
+                    <button type="button" class="btn btn-cancel" id="reset-cancel-btn">Cancel</button>
+                </div>
+
+                <!-- Divider with icon -->
+                <div class="divider">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </div>
 
             </form>
         </div>
